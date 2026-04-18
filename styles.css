@@ -1,154 +1,135 @@
-/* --- ESTILOS GENERALES (Afectan a toda la página) --- */
 body {
-    background-color: #05060e; /* Color de fondo negro */
-    font-family: Arial, sans-serif; /* Tipo de letra principal y alternativa */
-    color: #ffffff; /* Color de texto blanco para toda la página */
-    margin: 0; /* Elimina el espacio que el navegador pone por defecto en los bordes */
-    padding: 0; /* Elimina el espacio interno por defecto */
-    line-height: 1.6; /* Altura entre líneas de texto para que sea más legible */
+    background-color: #05060e; 
+    font-family: Arial, sans-serif; 
+    color: #ffffff; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6;
 }
 
-/* --- HEADER Y NAVEGACIÓN (La barra superior fija) --- */
 header {
-    position: fixed; /* Mantiene el menú siempre visible al hacer scroll */
-    top: 0; /* Lo pega al borde superior */
-    width: 100%; /* Hace que ocupe todo el ancho de la pantalla */
-    background-color: #000000f4; /* Fondo negro para que no se transparente el contenido al pasar */
-    border-bottom: solid 1px #ffffff; /* Línea blanca fina abajo del menú */
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3); /* Sombra blanca suave para dar profundidad */
-    z-index: 1000; /* Asegura que el menú siempre esté por encima de cualquier otro elemento */
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background-color: #000000f4; 
+    border-bottom: solid 1px #ffffff; 
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3); 
+    z-index: 1000; 
 }
 
-/* Estilos para las listas (ul) dentro de los menús */
 .main-nav ul, .contact-nav ul {
-    display: flex; /* Activa Flexbox para poner los elementos en fila */
-    justify-content: center; /* Centra los botones horizontalmente */
-    flex-wrap: wrap; /* Si no caben en una fila (celulares), bajan a la siguiente automáticamente */
-    list-style: none; /* Quita los puntitos de la lista */
-    padding: 15px; /* Espacio interno del menú */
-    margin: 0; /* Quita márgenes externos */
-    gap: 100px; /* Crea una separación igual de 100px entre cada botón */
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 15px; 
+    margin: 0; 
+    gap: 100px; 
 }
 
-/* --- ESTILOS DE LOS BOTONES --- */
 button {
-    background: #000000; /* Fondo negro del botón */
-    color: #ffffff; /* Texto blanco */
-    border: solid 1px #ffffff; /* Borde blanco fino */
-    cursor: pointer; /* Cambia el ratón a "manito" para indicar que es clickable */
-    border-radius: 3px; /* Redondea las esquinas apenas un poco */
-    padding: 8px 15px; /* Espacio interno: 8px arriba/abajo y 15px a los lados */
-    box-shadow: 2px 2px 3px white; /* Tu sombra clásica blanca hacia la derecha y abajo */
-    transition: all 0.3s ease; /* Hace que cualquier cambio (como el hover) sea suave y no brusco */
+    background: #000000;
+    color: #ffffff;
+    border: solid 1px #ffffff; 
+    cursor: pointer; 
+    border-radius: 3px; 
+    padding: 8px 15px; 
+    box-shadow: 2px 2px 3px white;
+    transition: all 0.3s ease; 
 }
 
-/* Efecto cuando pasas el mouse por encima del botón */
 button:hover {
-    background: #1e1e1e; /* Cambia el fondo a un gris oscuro */
-    transform: scale(1.05); /* Agranda el botón un 5% para dar efecto de presión */
+    background: #1e1e1e; 
+    transform: scale(1.05);
 }
 
-/* --- SECCIÓN HOME (La primera parte que se ve) --- */
 #home {
-    display: flex; /* Activa Flexbox para alinear texto e imagen */
-    flex-wrap: wrap; /* En pantallas chicas, pone la imagen arriba o abajo del texto */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    gap: 40px; /* Espacio de 40px entre el texto y la imagen */
-    padding: 120px 20px 60px; /* Espacio arriba (120px para que no lo tape el header), lados (20px) y abajo (60px) */
-    max-width: 1100px; /* Ancho máximo de esta sección para que no se estire infinito en monitores grandes */
-    margin: 0 auto; /* Centra todo el bloque en el medio de la pantalla */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    gap: 40px;
+    padding: 120px 20px 60px; 
+    max-width: 1100px; 
+    margin: 0 auto; 
 }
 
-/* Contenedor del texto en el Home */
 .text {
-    flex: 1; /* Hace que el texto use el espacio disponible */
-    min-width: 300px; /* Evita que el texto se comprima demasiado en pantallas chicas */
+    flex: 1; 
+    min-width: 300px; 
 }
 
-/* Estilo de tu foto de perfil */
 .profile-img {
-    width: 280px; /* Ancho fijo de la imagen */
-    height: 280px; /* Alto fijo igual al ancho para que sea un cuadrado perfecto */
-    border-radius: 10%; /* Esquinas redondeadas al 10% */
-    border: 2px solid #ffffff; /* Borde blanco de 2px */
-    box-shadow: 2px 2px 10px white; /* Sombra blanca más intensa para que resalte */
-    object-fit: cover; /* Recorta la imagen automáticamente para que no se vea estirada */
+    width: 280px; 
+    height: 280px; 
+    border-radius: 10%; 
+    border: 2px solid #ffffff; 
+    box-shadow: 2px 2px 10px white; 
+    object-fit: cover; 
 }
 
-/* --- TARJETAS REUTILIZABLES (About, Projects, Contact) --- */
 .card {
-    background: #000000; /* Fondo negro */
-    border: 1px solid #ddd; /* Borde gris muy clarito para definir la caja */
-    border-radius: 10px; /* Esquinas redondeadas */
-    padding: 30px; /* Espacio entre el borde y el texto de adentro */
-    margin: 40px auto; /* 40px de espacio entre tarjetas y auto para centrarlas */
-    max-width: 800px; /* Ancho máximo en computadoras */
-    width: 85%; /* En celulares ocupa el 85% del ancho de la pantalla */
-    box-shadow: 2px 2px 8px white; /* Sombra blanca característica */
-    scroll-margin-top: 100px; /* Al hacer clic en el menú, frena 100px antes para que el header no tape el título */
+    background: #000000; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    padding: 30px;
+    margin: 40px auto; 
+    max-width: 800px; 
+    width: 85%;
+    box-shadow: 2px 2px 8px white; 
+    scroll-margin-top: 100px; 
 }
 
-/* --- TIPOGRAFÍAS Y DETALLES --- */
 h1 { 
-    /* clamp permite que la letra mida 60px en PC pero se achique hasta 30px en celular automáticamente */
     font-size: clamp(30px, 8vw, 60px); 
 }
 
-/* Clase para dar el efecto de brillo al texto */
 .glow-text { 
     text-shadow: 2px 2px 4px white; 
 }
 
-/* Clase para las líneas horizontales (hr) con sombra */
 .glow-hr { 
     box-shadow: 2px 2px 4px white; 
     border: 0.5px solid white; 
 }
 
-/* Clase rápida para centrar cualquier texto */
 .center { 
     text-align: center; 
 }
 
-/* Tamaño de la bienvenida */
 .subtitle { 
     font-size: 22px; 
 }
 
-/* Estilo de los párrafos para que los bordes del texto estén alineados */
 p { 
     text-align: justify; 
 }
 
-/* --- PIE DE PÁGINA --- */
 footer {
-    text-align: center; /* Centra el copyright */
-    padding: 40px; /* Espacio arriba y abajo */
-    border-top: 1px solid #444; /* Línea gris oscura arriba del footer */
+    text-align: center;
+    padding: 40px; 
+    border-top: 1px solid #444; 
 }
 
-/* --- MEDIA QUERIES (Reglas específicas para celulares) --- */
 @media (max-width: 768px) {
-    /* Cuando la pantalla mide 768px o menos: */
     
     #home {
-        flex-direction: column-reverse; /* Pone la foto arriba y el texto abajo */
-        text-align: center; /* Centra el texto del nombre en celular */
+        flex-direction: column-reverse;
+        text-align: center; 
     }
 
     .main-nav ul {
-        gap: 10px; /* Reduce el espacio entre botones para que quepan */
+        gap: 10px; 
         padding: 10px;
     }
 
     button {
-        padding: 5px 10px; /* Botones un poquito más pequeños */
-        font-size: 14px; /* Letra de botones más pequeña */
+        padding: 5px 10px; 
+        font-size: 14px;
     }
 
     .card {
-        width: 85%; /* La tarjeta ocupa un poco más de espacio en pantalla chica */
-        padding: 20px; /* Menos espacio interno para ganar lugar */
+        width: 85%;
+        padding: 20px; 
     }
 }
