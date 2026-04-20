@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-/* Contenedor del fondo */
 .background-bg {
     position: fixed;
     top: 0;
@@ -11,21 +9,17 @@
     overflow: hidden;
 }
 
-/* Estilo de las manchas (Blobs) */
 .blob {
     position: absolute;
-    width: 80vw; /* Más grande para que cubra más área */
+    width: 80vw; 
     height: 60vw;
-    /* Usamos colores neón con opacidad 0.15 para que resalten */
     background: radial-gradient(circle, rgba(47, 0, 255, 0.208) 0%, rgba(0, 0, 0, 0.468) 70%);
     border-radius: 50%;
     filter: blur(100px); 
     animation: move 15s infinite alternate ease-in-out;
-    /* Este es el truco: hace que el color "brille" contra el negro */
     mix-blend-mode: screen; 
 }
 
-/* Segunda mancha con un color diferente para contraste */
 .blob:nth-child(2) {
     background: radial-gradient(circle, rgba(157, 0, 255, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
     right: -5%;
@@ -34,7 +28,6 @@
     animation-delay: -7s;
 }
 
-/* Tercera mancha (opcional, agrégala en el HTML si quieres más color) */
 .blob:nth-child(3) {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
     left: 20%;
@@ -51,47 +44,40 @@
 }
 
 body {
-    background-color: #000000; /* Color de fondo negro */
-    font-family: 'Roboto', Arial, sans-serif; /* Tipo de letra principal y alternativa */
-    color: #ffffff; /* Color de texto blanco para toda la página */
-    margin: 0; /* Elimina el espacio que el navegador pone por defecto en los bordes */
-    padding: 0; /* Elimina el espacio interno por defecto */
-    line-height: 1.6; /* Altura entre líneas de texto para que sea más legible */
+    background-color: #000000; 
+    font-family: 'Roboto', Arial, sans-serif; 
+    color: #d2d2d2; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6;
 }
 
-/* --- HEADER Y NAVEGACIÓN --- */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.048); /* Blanco muy transparente */
+    background: rgba(0, 0, 0, 0.048); 
     border-bottom: solid 1px #ffffff;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
     z-index: 1000;
-
-    /* Mantenemos las transiciones y la vinculación al scroll */
     transition: all 0.4s ease;
     animation: shrink-header linear both;
     animation-timeline: scroll();
-    animation-range: 0px 150px; /* Un poco más de rango para que sea suave */
+    animation-range: 0px 150px; 
 }
 
-/* LA CORRECCIÓN: Usamos translateY para que suba */
 @keyframes shrink-header {
     from {
-        transform: translateY(0); /* Empieza en su posición original */
+        transform: translateY(0); 
     }
     to {
-        /* Mueve el header 15px hacia ARRIBA (fuera de la pantalla) */
         transform: translateY(-25px); 
-        
         background-color: rgba(3, 3, 3, 0.991); 
         box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
     }
 }
 
-/* Ajuste para los botones: que no se corten al subir el header */
 header nav button {
     transition: all 0.4s ease;
     animation: shrink-buttons linear both;
@@ -101,115 +87,59 @@ header nav button {
 
 @keyframes shrink-buttons {
     to {
-        padding: 6px 12px; /* Un poco más compactos */
-        font-size: 13px;  /* Bajamos un pelín el tamaño */
-        margin-top: 20px;  /* Los empujamos hacia abajo para compensar que el header subió */
+        padding: 6px 12px; 
+        font-size: 13px;  
+        margin-top: 20px; 
     }
-=======
-body {
-    background-color: #05060e; 
-    font-family: Arial, sans-serif; 
-    color: #ffffff; 
-    margin: 0; 
-    padding: 0; 
-    line-height: 1.6;
-}
-
-header {
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    background-color: #000000f4; 
-    border-bottom: solid 1px #ffffff; 
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3); 
-    z-index: 1000; 
->>>>>>> 68d50a4a8589f9ed26164e82254912e0e3427903
 }
 
 .main-nav ul, .contact-nav ul {
-<<<<<<< HEAD
-    display: flex; /* Activa Flexbox para poner los elementos en fila */
-    justify-content: center; /* Centra los botones horizontalmente */
-    flex-wrap: wrap; /* Si no caben en una fila (celulares), bajan a la siguiente automáticamente */
-    list-style: none; /* Quita los puntitos de la lista */
-    padding: 20px; /* Espacio interno del menú */
-    margin: 0; /* Quita márgenes externos */
-    gap: 180px; /* Crea una separación igual de 100px entre cada botón */
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    list-style: none; 
+    padding: 20px; 
+    margin: 0; 
+    gap: 180px; 
 }
 
 .contact-nav ul {
-    display: flex; /* Activa Flexbox para poner los elementos en fila */
-    justify-content: center; /* Centra los botones horizontalmente */
-    flex-wrap: wrap; /* Si no caben en una fila (celulares), bajan a la siguiente automáticamente */
-    list-style: none; /* Quita los puntitos de la lista */
-    padding: 20px; /* Espacio interno del menú */
-    margin: 0; /* Quita márgenes externos */
-    gap: 80px; /* Crea una separación igual de 100px entre cada botón */
-=======
     display: flex; 
     justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 15px; 
+    flex-wrap: wrap; 
+    list-style: none; 
+    padding: 20px; 
     margin: 0; 
-    gap: 100px; 
->>>>>>> 68d50a4a8589f9ed26164e82254912e0e3427903
+    gap: 80px; 
 }
 
 button {
-<<<<<<< HEAD
-    background: rgba(255, 255, 255, 0.048); /* Blanco muy transparente */
-    color: #ffffff; /* Texto blanco */
-    border: solid 1px #ffffff; /* Borde blanco fino */
-    cursor: pointer; /* Cambia el ratón a "manito" para indicar que es clickable */
-    border-radius: 3px; /* Redondea las esquinas apenas un poco */
-    padding: 8px 15px; /* Espacio interno: 8px arriba/abajo y 15px a los lados */
-    transition: all 0.6s ease; /* Hace que cualquier cambio (como el hover) sea suave y no brusco */
-=======
-    background: #000000;
-    color: #ffffff;
+    background: rgba(255, 255, 255, 0.048); 
+    color: #ffffff; 
     border: solid 1px #ffffff; 
     cursor: pointer; 
     border-radius: 3px; 
     padding: 8px 15px; 
-    box-shadow: 2px 2px 3px white;
-    transition: all 0.3s ease; 
->>>>>>> 68d50a4a8589f9ed26164e82254912e0e3427903
+    transition: all 0.6s ease;
 }
 
 button:hover {
-<<<<<<< HEAD
-    background: #1e1e1e; /* Cambia el fondo a un gris oscuro */
-    transform: scale(1.05); /* Agranda el botón un 5% para dar efecto de presión */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Brillo intenso alrededor */
-    border-radius: 5%; /* Se vuelve un poco más cuadrada al ampliarse */
-=======
-    background: #1e1e1e; 
-    transform: scale(1.05);
->>>>>>> 68d50a4a8589f9ed26164e82254912e0e3427903
+    background: #1e1e1e;
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); 
+    border-radius: 5%; 
 }
 
 #home {
-<<<<<<< HEAD
-    display: flex; /* Activa Flexbox para alinear texto e imagen */
-    flex-wrap: wrap; /* En pantallas chicas, pone la imagen arriba o abajo del texto */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    gap: 40px; /* Espacio de 40px entre el texto y la imagen */
-    padding: 120px 20px 60px; /* Espacio arriba (120px para que no lo tape el header), lados (20px) y abajo (60px) */
-    max-width: 1100px; /* Ancho máximo de esta sección para que no se estire infinito en monitores grandes */
-    margin: 0 auto; /* Centra todo el bloque en el medio de la pantalla */
-    margin-top: 50px; /* Espacio extra arriba para que no lo tape el header al cargar la página */
-=======
-    display: flex; 
-    flex-wrap: wrap; 
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center; 
-    align-items: center;
+    align-items: center; 
     gap: 40px;
     padding: 120px 20px 60px; 
     max-width: 1100px; 
     margin: 0 auto; 
->>>>>>> 68d50a4a8589f9ed26164e82254912e0e3427903
+    margin-top: 50px; 
 }
 
 .text {
@@ -218,62 +148,40 @@ button:hover {
 }
 
 .profile-img {
-<<<<<<< HEAD
-    width: 280px; /* Ancho fijo de la imagen */
-    height: 280px; /* Alto fijo igual al ancho para que sea un cuadrado perfecto */
-    border-radius: 10%; /* Esquinas redondeadas al 10% */
-    border: 2px solid #ffffff; /* Borde blanco de 2px */
-    box-shadow: 2px 2px 10px white; /* Sombra blanca más intensa para que resalte */
-    object-fit: cover; /* Recorta la imagen automáticamente para que no se vea estirada */
-    transition: all 0.9s ease; /* Hace que cualquier cambio (como el hover) sea suave y no brusco */
-}
-
-.profile-img:hover {
-    transform: scale(1.1); /* Se agranda un 50% */
-    z-index: 999; /* Se pone por encima de todo el contenido */
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); /* Brillo intenso alrededor */
-    border-radius: 5%; /* Se vuelve un poco más cuadrada al ampliarse */
-=======
-    width: 280px; 
+    width: 280px;
     height: 280px; 
     border-radius: 10%; 
     border: 2px solid #ffffff; 
     box-shadow: 2px 2px 10px white; 
     object-fit: cover; 
->>>>>>> 68d50a4a8589f9ed26164e82254912e0e3427903
+    transition: all 0.9s ease; 
+}
+
+.profile-img:hover {
+    transform: scale(1.1); 
+    z-index: 999; 
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); 
+    border-radius: 5%; 
 }
 
 .card {
-<<<<<<< HEAD
-    background: rgba(255, 255, 255, 0.030); /* Blanco muy transparente */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-    border-radius: 10px; /* Esquinas redondeadas */
-    padding: 30px; /* Espacio entre el borde y el texto de adentro */
-    margin: 70px auto; /* 40px de espacio entre tarjetas y auto para centrarlas */
-    max-width: 900px; /* Ancho máximo en computadoras */
-    width: 85%; /* En celulares ocupa el 85% del ancho de la pantalla */
-    box-shadow: 1px 1px 2px white; /* Sombra blanca característica */
-    scroll-margin-top: 100px; /* Al hacer clic en el menú, frena 100px antes para que el header no tape el título */
+    background: rgba(255, 255, 255, 0.030); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 10px; 
+    padding: 30px; 
+    margin: 70px auto; 
+    max-width: 900px; 
+    width: 85%; 
+    box-shadow: 1px 1px 2px white; 
+    scroll-margin-top: 100px; 
     transition: all 0.9s ease;
-    backdrop-filter: blur(10px); /* Desenfoque de fondo */
-   
+    backdrop-filter: blur(10px); 
 }
 
 .card:hover {
-    transform: scale(1.05); /* Se agranda un 50% */
-    z-index: 999; /* Se pone por encima de todo el contenido */
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); /* Brillo intenso alrededor */
-=======
-    background: #000000; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    padding: 30px;
-    margin: 40px auto; 
-    max-width: 800px; 
-    width: 85%;
-    box-shadow: 2px 2px 8px white; 
-    scroll-margin-top: 100px; 
->>>>>>> 68d50a4a8589f9ed26164e82254912e0e3427903
+    transform: scale(1.05);
+    z-index: 999; 
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); 
 }
 
 h1 { 
